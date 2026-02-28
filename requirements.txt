@@ -1,0 +1,15 @@
+# 데이터 수집 및 처리
+pandas
+numpy
+beautifulsoup4
+selenium
+webdriver-manager
+
+# 시각화 및 지도
+matplotlib
+seaborn
+folium
+googlemaps
+
+# 통계 분석
+scipy
