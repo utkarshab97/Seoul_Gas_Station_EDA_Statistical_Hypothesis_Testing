@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Directory</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-main: #2d3748;
+            --text-muted: #718096;
+            --accent: #3182ce;
+            --accent-hover: #2b6cb0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-main);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .map-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .map-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .map-card h2 {
+            font-size: 1.25rem;
+            margin: 0 0 8px 0;
+            color: var(--text-main);
+        }
+
+        .map-card p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin: 0 0 16px 0;
+            flex-grow: 1;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .map-card:hover .btn {
+            background-color: var(--accent-hover);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Explore Available Maps</h1>
+        
+        <div class="grid">
+            <!-- Map 1 -->
+            <a href="maps/gas_prices_seoul_map.html" class="map-card">
+                <div class="icon">⛽</div>
+                <h2>Gasoline Price Map</h2>
+                <p>View Seoul per-district gas price difference between self-serve and non-self-serve gas stations.</p>
+                <span class="btn">Open Map</span>
+            </a>
+
+            <!-- Map 2 -->
+            <a href="maps/diesel_prices_seoul_map.html" class="map-card">
+                <div class="icon">🚚</div>
+                <h2>Diesel Price Map</h2>
+                <p>View Seoul per-district diesel price difference between self-serve and non-self-serve gas stations.</p>
+                <span class="btn">Open Map</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

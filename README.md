@@ -1,7 +1,7 @@
 # ⛽ 서울시 주유소 유가 분석 및 셀프 주유소 경제성 검정
 
 ## 0. 🥅 프로젝트 개요 (Overview)
-본 프로젝트는 **"셀프 주유소는 실제로 일반 주유소보다 저렴한가?"**라는 질문에 대해 서울시 내 400여 개 주유소 데이터를 활용하여 통계적으로 해답을 제시합니다. 단순한 평균 비교를 넘어, 정규성 및 등분산성 검정을 거친 엄격한 가설 검정(Welch's t-test)을 통해 데이터 기반의 결론을 도출했습니다.
+본 프로젝트는 **"셀프 주유소는 실제로 일반 주유소보다 저렴한가?"** 라는 질문에 대해 서울시 내 400여 개 주유소 데이터를 활용하여 통계적으로 해답을 제시합니다. 단순한 평균 비교를 넘어, 정규성 및 등분산성 검정을 거친 엄격한 가설 검정(Welch's t-test)을 통해 데이터 기반의 결론을 도출했습니다.
 
 ## 1. 🛠 기술 스택 (Tech Stack)
 - **Data Collection:** Selenium, BeautifulSoup4 (동적 웹 크롤링)
@@ -38,7 +38,7 @@
 
 ### 4. 자치구별 셀프-일반 가격 편차 히트맵 (Folium Choropleth)
 ![Gas Prices Self/Not-Self Price Advantage Choropleth](./images/gas_prices_self_advantage_choropleth.png) ![Diesel Prices Self/Not-Self Price Advantage Choropleth](./images/diesel_prices_self_advantage_choropleth.png)
-- **인사이트:** 강남구, 중구 등 고가 지역일수록 셀프와 일반 주유소 간의 가격 격차가 크게 벌어지는 경향을 확인했습니다. (결과물: `maps/gas_price_choropleth.html`)
+- **인사이트:** 강남구, 중구 등 고가 지역일수록 셀프와 일반 주유소 간의 가격 격차가 크게 벌어지는 경향을 확인했습니다. (결과물: <a href="index.html">지도 접근용 HTML Landing Page</a>)
 
 ### 5. 통계적 가설 검정 결과 요약 (Statistical Test Summary)
 | 검정 항목 | 통계량 (Statistic) | p-value | 결론 |
@@ -53,16 +53,16 @@
 | **셀프 여부 경유 Welch's t-test** | **-8.12** | **1.17e-13 < 0.001** | **유의미한 차이 있음 (가설 입증)** |
 
 - **인사이트:**
-  - **정규성 검정 (Shapiro-Wilk):** 비정규 분포 확인 ($p < 0.05$). 그러나 표본 크기($N > 30$)가 충분하여 **중심극한정리(CLT)**를 근거로 t-test를 수행할 수 있다고 검증했습니다.
+  - **정규성 검정 (Shapiro-Wilk):** 비정규 분포 확인 ($p < 0.05$). 그러나 표본 크기($N > 30$)가 충분하여 **중심극한정리(CLT)** 를 근거로 t-test를 수행할 수 있다고 검증했습니다.
   - **등분산 검정 (Levene):** 두 집단의 분산이 다름을 확인하여 단측 독립표본 t-test 대신 Welch’s t-test 수행해야 한다고 판단했습니다.
-  - **최종 검정 (Welch’s t-test):** 단측 검정 결과 $p < 0.05$로 나타나, **"서울시 셀프 주유소는 유의미하게 저렴하다"**는 대립가설을 채택했습니다.
+  - **최종 검정 (Welch’s t-test):** 단측 검정 결과 $p < 0.05$로 나타나, **"서울시 셀프 주유소는 유의미하게 저렴하다"** 는 대립가설을 채택했습니다.
 
 ## 4. 💡 결론 및 비즈니스 영향 (Conclusions & Business Impact)
 - **통계적 의사결정:** Welch's t-test를 통해 서울시 내 셀프 주유소가 통계적으로 유의미하게 저렴함을 입증했습니다. 이는 소비자에게 '셀프 주유'가 실질적인 비용 절감 수단이 됨을 데이터로 증명한 것입니다.
 - **지역적 특수성 고려:** 하지만 금천구와 같은 특정 지역에서는 셀프 주유소가 오히려 더 비싼 '가격 역전 현상'이나, 일부 자치구의 '가격 하향 평준화(Price Convergence)' 경향이 확인되었습니다.
 - **비즈니스 인사이트:** 운송업체나 일반 운전자는 단순히 '셀프 여부'만 따지기보다, 자치구별 가격 편차를 우선적으로 고려해야 합니다. 특히 고가 지역(중구, 강남구 등)에서는 셀프와 일반 주유소의 가격 격차가 크므로 셀프 이용의 경제적 유인이 극대화되지만, 저가 지역이나 특정 예외 지역에서는 인근 일반 주유소를 이용하는 것이 시간 대비 효율적일 수 있습니다.
 
---
+---
 ## **💻 실행 가이드 (How to Run)**
 
 **1. 라이브러리 설치**
@@ -80,11 +80,12 @@ pip install -r requirements.txt
 **4. 인터랙티브 지도 확인**
 - `maps/` 폴더 내의 HTML 파일들을 브라우저로 열어 자치구별 상세 유가 지도를 확인할 수 있습니다.
 
---
+---
 ## 📁 폴더 구조 (Project Structure)
 ```text
 .
-├── Seoul_Gas_Station_EDA_Stats_Hypothesis_Testing.ipynb # 메인 분석 및 가설 검정 노트북
+├── Seoul_Gas_Station_EDA_Stats_Hypothesis_Testing.ipynb # (핵심) 메인 분석 및 가설 검정 노트북
+├── index.html                                           # 인터랙티브 지도를 접근용 HTML Landing Page
 ├── README.md                                            # 프로젝트 상세 설명서
 ├── requirements.txt                                     # 프로젝트 실행을 위한 라이브러리 목록
 ├── .gitignore                                           # Git 업로드 제외 설정 (API Key, 캐시 등)
