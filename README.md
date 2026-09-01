@@ -1,6 +1,6 @@
 # ⛽ 서울시 주유소 유가 분석 및 셀프 주유소 경제성 검정
-<a href="https://utkarshab97.github.io/Seoul_Gas_Station_EDA_Statistical_Hypothesis_Testing/">
-  <img src="https://www.svgrepo.com/show/428096/maps.svg" alt="Map Access Landing Page" width="20" height="20"> <code style="color: inherit;">Map Access Landing Page</code>
+<a href="https://utkarshab97.github.io/Seoul_Gas_Station_EDA_Statistical_Hypothesis_Testing/" style="color: inherit; text-decoration: none;">
+  <img src="https://www.svgrepo.com/show/428096/maps.svg" alt="Map Access Landing Page" width="20" height="20"><code style="color: inherit;">Map Access Landing Page</code>
 </a>
 
 ## 0. 🥅 프로젝트 개요 (Overview)
