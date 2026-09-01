@@ -38,7 +38,7 @@
 
 ### 4. 자치구별 셀프-일반 가격 편차 히트맵 (Folium Choropleth)
 ![Gas Prices Self/Not-Self Price Advantage Choropleth](./images/gas_prices_self_advantage_choropleth.png) ![Diesel Prices Self/Not-Self Price Advantage Choropleth](./images/diesel_prices_self_advantage_choropleth.png)
-- **인사이트:** 강남구, 중구 등 고가 지역일수록 셀프와 일반 주유소 간의 가격 격차가 크게 벌어지는 경향을 확인했습니다. (결과물: <a href="index.html">지도 접근용 HTML Landing Page</a>)
+- **인사이트:** 강남구, 중구 등 고가 지역일수록 셀프와 일반 주유소 간의 가격 격차가 크게 벌어지는 경향을 확인했습니다. (결과물: <a href="https://utkarshab97.github.io/Seoul_Gas_Station_EDA_Statistical_Hypothesis_Testing/">지도 접근용 HTML Landing Page</a>)
 
 ### 5. 통계적 가설 검정 결과 요약 (Statistical Test Summary)
 | 검정 항목 | 통계량 (Statistic) | p-value | 결론 |
